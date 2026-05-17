@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>URL Detection</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+
+    <nav>
+
+        <div class="logo">
+            PhishGuard AI
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="detection.html">Detection</a>
+            <a href="about.html">About</a>
+        </div>
+
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-container">
+
+            <div class="hero-text">
+
+                <h1>
+                    Real-Time <span>URL Detection</span>
+                </h1>
+
+                <p>
+                    Analyze suspicious URLs using machine learning technology to detect phishing websites and improve cybersecurity awareness.
+                </p>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="scan-header">
+                    <h2>Analyze URL</h2>
+                    <div class="status">AI Detection</div>
+                </div>
+
+                <input
+                    type="text"
+                    placeholder="Enter suspicious URL..."
+                    class="url-input"
+                    id="urlInput"
+                >
+
+                <button class="detect-btn" id="detectButton">
+                    Analyze URL
+                </button>
+
+                <!-- Loading -->
+
+                <div class="loading-box hidden" id="loadingBox">
+
+                    <div class="loading-spinner"></div>
+
+                    <p>
+                        Analyzing URL...
+                    </p>
+
+                </div>
+
+                <!-- Result -->
+
+                <div class="scan-result hidden" id="resultBox">
+
+                    <div class="warning-box" id="resultAlert">
+
+                        ⚠ WARNING: This URL is detected as a phishing website and may contain malicious activity.
+
+                    </div>
+
+                    <div class="result-grid">
+
+                        <div class="result-card">
+                            <h3>Threat Level</h3>
+                            <p id="threatLevel">-</p>
+                        </div>
+
+                        <div class="result-card">
+                            <h3>Prediction</h3>
+                            <p id="predictionText">-</p>
+                        </div>
+
+                        <div class="result-card">
+                            <h3>Confidence</h3>
+                            <p id="confidenceText">-</p>
+                        </div>
+
+                        <div class="result-card">
+                            <h3>HTTPS Status</h3>
+                            <p id="httpsStatus">-</p>
+                        </div>
+                        <div class="analysis-box">
+
+        <h3>
+            Analysis Explanation
+        </h3>
+
+        <p id="analysisText">
+
+            This URL contains suspicious phishing characteristics.
+
+        </p>
+
+    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="features hidden" id="indicatorSection">
+
+        <div class="section-title">
+
+            <h2>Suspicious Indicators</h2>
+
+            <p>
+                The system analyzes several suspicious URL characteristics commonly used in phishing attacks.
+            </p>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-box">
+
+                <h3>IP Address Usage</h3>
+
+                <p>
+                    URLs containing raw IP addresses instead of domain names are often associated with phishing websites.
+                </p>
+
+            </div>
+
+            <div class="feature-box">
+
+                <h3>Long URL Structure</h3>
+
+                <p>
+                    Extremely long URLs may be used to hide malicious domains and confuse users.
+                </p>
+
+            </div>
+
+            <div class="feature-box">
+
+                <h3>Excessive Symbols</h3>
+
+                <p>
+                    Suspicious symbols such as multiple hyphens, special characters, or unusual patterns may indicate phishing activity.
+                </p>
+
+            </div>
+
+            <div class="feature-box">
+
+                <h3>HTTPS & Security Check</h3>
+
+                <p>
+                    The system evaluates HTTPS usage and other security indicators to improve phishing detection accuracy.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 URL Phishing Detection System | Machine Learning Security Project
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
