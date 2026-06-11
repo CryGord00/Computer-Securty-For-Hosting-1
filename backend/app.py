@@ -389,12 +389,13 @@ class AppHandler(BaseHTTPRequestHandler):
         print("[%s] %s" % (self.log_date_time_string(), format % args))
 
 
-def run(host="127.0.0.1", port=5000):
+def run(host="0.0.0.0", port=10000):
     server = ThreadingHTTPServer((host, port), AppHandler)
     print(f"Backend berjalan di http://{host}:{port}")
     print(f"Buka frontend di http://{host}:{port}/detection")
     server.serve_forever()
 
-
 if __name__ == "__main__":
-    run()
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    run(host="0.0.0.0", port=port)
